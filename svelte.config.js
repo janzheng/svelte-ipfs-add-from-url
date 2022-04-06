@@ -37,7 +37,7 @@ const config = {
 
   // vercel; regular deployment
   kit: {
-    adapter: adapter({ env: { port: process.env.PORT } }),
+    adapter: adapter_node({ env: { port: process.env.PORT } }),
     // adapter: adapter_auto(),
     // adapter: adapter_vercel(),
     // adapter: adapter_static(),
