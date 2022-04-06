@@ -47,6 +47,7 @@
   async function getIPFS() {
     try {
       // post new submission to board
+      console.log('Fetching IPFS URLs...')
       const res = await fetch(
         `/add`, 
         {
@@ -54,7 +55,7 @@
           method: 'POST',
           body: JSON.stringify({
             src,
-            sources: sources.trim().split(/\s*,\s*/)
+            sources: sources && sources.trim().split(/\s*,\s*/)
           })
         })
       if (res.ok) {
