@@ -67,7 +67,6 @@
   },
   "dependencies": {
     "@lukeed/uuid": "^2.0.0",
-    "axios": "^0.25.0",
     "cookie": "^0.4.1",
     "ngl": "^0.10.4",
     "prismjs": "^1.26.0",
