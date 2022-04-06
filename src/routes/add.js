@@ -41,9 +41,10 @@ export const post = async ({ request }) => {
     let file = await ipfs.add(urlSource(src))
     let cid_str = file.cid.toString()
     file['cid'] = cid_str
-    file['ipfs'] = 'https://ipfs.io/ipfs/' + cid_str
+    file['ipfsio'] = 'https://ipfs.io/ipfs/' + cid_str
     file['cloudflare'] = 'https://cloudflare-ipfs.com/ipfs/' + cid_str
-    console.log('file: ', file)
+    file['infura'] = 'https://ipfs.infura.io/ipfs/' + cid_str
+    file['pinata'] = 'https://gateway.pinata.cloud/ipfs/' + cid_str
   
     return {
       body: file,
@@ -67,8 +68,10 @@ export const post = async ({ request }) => {
       data.map(async file => {
         let cid_str = file.cid.toString()
         file['cid'] = cid_str
-        file['ipfs'] = 'https://ipfs.io/ipfs/' + cid_str
+        file['ipfsio'] = 'https://ipfs.io/ipfs/' + cid_str
         file['cloudflare'] = 'https://cloudflare-ipfs.com/ipfs/' + cid_str
+        file['infura'] = 'https://ipfs.infura.io/ipfs/' + cid_str
+        file['pinata'] = 'https://gateway.pinata.cloud/ipfs/' + cid_str
         files.push(file)
       })
 
