@@ -21,6 +21,13 @@ The code for the server upload piece is here. Feel free to re-use. It's a node/s
 It's all unlicensed — feel free to do what you wish with it! Good luck. Reply or DM if you need more help
 
 
+## Prototype App
+
+The prototype is deployed on Railway.app here: https://svelte-ipfs-add-from-url-production-5cde.up.railway.app/ I couldn't use Vercel for this b/c the IPFS dependency requires Node 16, which isn't supported by AWS Lambdas (which Vercel and some other serverless run on). 
+
+Haven't tried this on Cloudflare Workers but it should probably work the same. Not sure if they support Node 16.
+
+
 ## For the actual Airtable Script...
 
 Check out the airtable-script.js file. Copy this into a new Airtable Script and run it.
